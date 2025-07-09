@@ -1,24 +1,22 @@
-name: Deploy to Namecheap
- 
+name: Deploy to Namecheap via SFTP
+
 on:
   push:
     branches:
       - main  # Or 'master', depending on your default branch name
- 
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
- 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+
+      - name: SFTP Deploy
+        uses: laryxb/beagle-sftp-action@v2.0.4
         with:
-          # IMPORTANT: All lines below this must be indented correctly
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp
-          port: 22
-          server-dir: public_html/
+          port: 22 # SFTP usually runs on port 22
+          remote_path: public_html/
