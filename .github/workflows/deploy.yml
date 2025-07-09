@@ -1,26 +1,24 @@
-# GitHub Action for deploying to Namecheap shared hosting
 name: Deploy to Namecheap
-
-# This action runs on every push to the 'main' branch
+ 
 on:
   push:
     branches:
       - main  # Or 'master', depending on your default branch name
-
+ 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checks out your repository code so the job can access it
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      # Step 2: Deploys the files to the server using FTP
+ 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          # The public_html directory is the root for websites on Namecheap
+          # IMPORTANT: All lines below this must be indented correctly
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: sftp
+          port: 22
           server-dir: public_html/
