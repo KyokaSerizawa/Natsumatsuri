@@ -3,7 +3,7 @@ name: Deploy to Namecheap
 on:
   push:
     branches:
-      - main  # Or 'master', depending on your default branch name
+      - main
 
 jobs:
   deploy:
@@ -12,18 +12,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: SFTP Deploy
-        uses: easingthemes/ssh-deploy@v5.0.0
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          # Private key for SSH authentication
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          # Remote host to connect to
-          REMOTE_HOST: ${{ secrets.FTP_SERVER }}
-          # Remote user
-          REMOTE_USER: ${{ secrets.FTP_USERNAME }}
-          # Remote port
-          REMOTE_PORT: 22
-          # The local directory to copy from, "." for the entire repository
-          SOURCE: "."
-          # The destination directory on the remote server
-          TARGET: "public_html/"
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps # Use 'ftps' for a secure connection
+          port: 21      # Standard port for FTP/FTPS
+          server-dir: public_html/
