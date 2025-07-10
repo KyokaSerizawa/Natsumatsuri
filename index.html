@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -7,35 +7,47 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles inspired by the event poster */
+        /* Natsumatsuri Golden Fireworks Theme */
+        @keyframes firework-glow {
+            0% { background-color: #F5DEB3; } /* Base golden color */
+            50% { background-color: #FAF0D7; } /* Lighter, shimmering gold */
+            100% { background-color: #F5DEB3; }
+        }
+
         body {
             font-family: 'Inter', 'Noto Sans JP', sans-serif;
-            background-color: #FFFBF0; /* A warmer, creamy background */
+            color: #333; /* Dark text for better readability on gold */
+            animation: firework-glow 10s infinite ease-in-out; /* Subtle glowing background effect */
         }
         .font-noto {
             font-family: 'Noto Sans JP', sans-serif;
         }
         .section-title {
-            border-bottom: 3px solid #DC2626; /* A vibrant red */
+            border-bottom: 3px solid #E53E3E; /* Vibrant red for section titles */
             padding-bottom: 0.5rem;
             display: inline-block;
+            color: #E53E3E; /* Make the title text red as well */
         }
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #FDE68A; /* Subtle golden border */
+            border: 1px solid #FFC107; /* A slightly brighter gold for card borders */
+            background-color: #ffffff; /* Keep cards white for content clarity */
         }
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         .theme-red {
-            color: #DC2626;
+            color: #E53E3E; /* Consistent vibrant red */
         }
         .theme-bg-red {
-            background-color: #DC2626;
+            background-color: #E53E3E; /* Consistent vibrant red background */
         }
         .theme-hover-bg-red:hover {
-            background-color: #B91C1C;
+            background-color: #C62828; /* Darker shade for hover effect */
+        }
+        header.bg-white\/80 {
+            background-color: rgba(255, 255, 255, 0.9) !important; /* Slightly more opaque header */
         }
         html {
             scroll-behavior: smooth;
@@ -88,7 +100,7 @@
         <section id="activities" class="my-20 scroll-mt-20">
             <h2 class="text-4xl font-bold mb-12 text-center section-title font-noto">Festival Activities</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-                <a href="#game-yatai-details" class="card block bg-white rounded-lg shadow-lg p-6 text-center">
+                <a href="#game-yatai-details" class="card block shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red">
                         <img src="icons/firework.png" alt="Game Yatai Icon" class="page-icon w-16 h-16 mx-auto">
                     </div>
@@ -96,7 +108,7 @@
                     <p class="text-gray-500 font-semibold">Location: Parliament</p>
                     <span class="mt-2 inline-block text-blue-500 text-sm font-semibold">Click for details!</span>
                 </a>
-                <a href="#food-yatai-details" class="card block bg-white rounded-lg shadow-lg p-6 text-center">
+                <a href="#food-yatai-details" class="card block shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red">
                         <img src="icons/firework.png" alt="Food Yatai Icon" class="page-icon w-16 h-16 mx-auto">
                     </div>
@@ -104,7 +116,7 @@
                     <p class="text-gray-500 font-semibold">Location: Cafeteria</p>
                     <span class="mt-2 inline-block text-blue-500 text-sm font-semibold">Click for details!</span>
                 </a>
-                <a href="#crafting-market-details" class="card block bg-white rounded-lg shadow-lg p-6 text-center">
+                <a href="#crafting-market-details" class="card block shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red">
                          <img src="icons/firework.png" alt="Crafting Market Icon" class="page-icon w-16 h-16 mx-auto">
                     </div>
@@ -112,7 +124,7 @@
                     <p class="text-gray-500 font-semibold">Location: Parliament</p>
                     <span class="mt-2 inline-block text-blue-500 text-sm font-semibold">Click for details!</span>
                 </a>
-                <a href="#crafting-space-details" class="card block bg-white rounded-lg shadow-lg p-6 text-center">
+                <a href="#crafting-space-details" class="card block shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red">
                         <img src="icons/firework.png" alt="Crafting Space Icon" class="page-icon w-16 h-16 mx-auto">
                     </div>
@@ -120,7 +132,7 @@
                     <p class="text-gray-500 font-semibold">Location: Cafeteria</p>
                     <span class="mt-2 inline-block text-blue-500 text-sm font-semibold">Click for details!</span>
                 </a>
-                <a href="#performance-details" class="card block bg-white rounded-lg shadow-lg p-6 text-center">
+                <a href="#performance-details" class="card block shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red">
                         <img src="icons/firework.png" alt="Performance Icon" class="page-icon w-16 h-16 mx-auto">
                     </div>
@@ -134,23 +146,23 @@
         <section id="game-yatai-details" class="my-20 bg-amber-50 rounded-xl p-8 scroll-mt-20">
             <h2 class="text-4xl font-bold mb-12 text-center section-title font-noto">Game Yatai Stalls</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Omikuji Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Omikuji (おみくじ)</h3>
                 </div>
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Scooping Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Scooping</h3>
                 </div>
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Fishing Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Fishing</h3>
                 </div>
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Shooting Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Shooting</h3>
                 </div>
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Ring Toss Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Ring Toss</h3>
                 </div>
@@ -160,11 +172,11 @@
         <section id="food-yatai-details" class="my-20 bg-rose-50 rounded-xl p-8 scroll-mt-20">
             <h2 class="text-4xl font-bold mb-12 text-center section-title font-noto">Food Yatai Stalls</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Taiyaki Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Taiyaki (たい焼き)</h3>
                 </div>
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Ramune Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Ramune (ラムネ)</h3>
                 </div>
@@ -174,19 +186,19 @@
         <section id="crafting-market-details" class="my-20 bg-green-50 rounded-xl p-8 scroll-mt-20">
             <h2 class="text-4xl font-bold mb-12 text-center section-title font-noto">Crafting Market Artists</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Artist Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Shinki</h3>
                     <p class="text-gray-500 font-semibold">Candles</p>
                     <p class="mt-2 text-gray-700 italic">"Chill and Relax!"</p>
                 </div>
-                 <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                 <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Artist Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Hana</h3>
                     <p class="text-gray-500 font-semibold">Pottery</p>
                     <p class="mt-2 text-gray-700 italic">"Handmade with love."</p>
                 </div>
-                 <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                 <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Artist Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Kenji</h3>
                     <p class="text-gray-500 font-semibold">Illustrations</p>
@@ -198,19 +210,19 @@
         <section id="crafting-space-details" class="my-20 bg-sky-50 rounded-xl p-8 scroll-mt-20">
             <h2 class="text-4xl font-bold mb-12 text-center section-title font-noto">Crafting Space</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Crafting Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Rubber Band Gun Crafting</h3>
                 </div>
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Crafting Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Lantern Painting</h3>
                 </div>
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Crafting Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Fan Painting</h3>
                 </div>
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Crafting Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Yukata Wearing</h3>
                 </div>
@@ -220,37 +232,37 @@
         <section id="performance-details" class="my-20 bg-purple-50 rounded-xl p-8 scroll-mt-20">
             <h2 class="text-4xl font-bold mb-12 text-center section-title font-noto">Performers</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Performer Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Music Club</h3>
                     <p class="text-gray-500 font-semibold">Live Band Performance</p>
                     <p class="mt-2 text-gray-700 italic">"Make some noise!"</p>
                 </div>
-                 <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                 <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Performer Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Kimiko Wakayagi</h3>
                     <p class="text-gray-500 font-semibold">Japanese Traditional Dance</p>
                     <p class="mt-2 text-gray-700 italic">"Enjoy rich Japanese Traditional Culture"</p>
                 </div>
-                 <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                 <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Performer Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Kendaman</h3>
                     <p class="text-gray-500 font-semibold">Kendama</p>
                     <p class="mt-2 text-gray-700 italic">"Discover modern classic Japanese toy"</p>
                 </div>
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Performer Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Renji</h3>
                     <p class="text-gray-500 font-semibold">Singer</p>
                     <p class="mt-2 text-gray-700 italic">"Let's sing together"</p>
                 </div>
-                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Performer Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Yume and Kimmy</h3>
                     <p class="text-gray-500 font-semibold">Singer & Guitarist</p>
                     <p class="mt-2 text-gray-700 italic">"chill and relax"</p>
                 </div>
-                 <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                 <div class="card shadow-lg p-6 text-center">
                     <div class="mb-4 theme-red"><img src="icons/firework.png" alt="Performer Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Bon Odori</h3>
                     <p class="text-gray-500 font-semibold">Everyone</p>
