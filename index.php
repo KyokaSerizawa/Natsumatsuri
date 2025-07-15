@@ -1,3 +1,9 @@
+<?php
+    // Include the counter logic and get the latest count.
+    // This will increment the counter on every page load.
+    require_once('counter.php');
+    $visitor_count = update_and_get_visitor_count();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -156,7 +162,7 @@
                     <h3 class="text-xl font-bold">Scooping</h3>
                 </div>
                 <div class="card p-6 text-center">
-                    <div class="mb-4 theme-accent-text"><img src="icons/icons8-fishing-100.png"" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
+                    <div class="mb-4 theme-accent-text"><img src="icons/icons8-fishing-100.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Fishing</h3>
                 </div>
                 <div class="card p-6 text-center">
@@ -174,15 +180,15 @@
             <h2 class="text-4xl font-bold mb-12 text-center section-title font-noto">Food Yatai Stalls</h2>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div class="card p-6 text-center">
-                    <div class="mb-4 theme-accent-text"><img src="icons/taiyaki.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
+                    <div class="mb-4 theme-accent-text"><img src="icons8-soda-100.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Taiyaki (たい焼き)</h3>
                 </div>
                 <div class="card p-6 text-center">
-                    <div class="mb-4 theme-accent-text"><img src="icons/icons8-soda-100.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
+                    <div class="mb-4 theme-accent-text"><img src="icons8-soda-100.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Ramune (ラムネ)</h3>
                 </div>
                 <div class="card p-6 text-center">
-                    <div class="mb-4 theme-accent-text"><img src="icons/icons8-kawaii-pizza-100.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
+                    <div class="mb-4 theme-accent-text"><img src="icons8-kawaii-pizza-100.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Pizza</h3>
                 </div>
             </div>
@@ -275,7 +281,7 @@
                                             <p class="text-sm text-gray-500">5:00 PM</p>
                                             <p class="font-medium">Doors Open (General)</p>
                                             <p class="font-medium mt-1">Yume (Parliament)</p>
-                                            <p class="font-medium mt-1"</p>
+                                            <p class="font-medium mt-1"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -450,7 +456,16 @@
                 <a href="#" class="text-gray-400 hover:text-white"><img src="icons/firework.png" alt="Twitter Icon" class="page-icon w-6 h-6"></a>
                 <a href="#" class="text-gray-400 hover:text-white"><img src="icons/firework.png" alt="Instagram Icon" class="page-icon w-6 h-6"></a>
             </div>
-        </div>
+
+            <div class="mt-8 border-t border-gray-600 pt-6">
+                <p class="text-sm text-gray-300">
+                    Total Site Visits: 
+                    <span class="font-bold text-lg text-white">
+                        <?php echo number_format($visitor_count); ?>
+                    </span>
+                </p>
+            </div>
+            </div>
     </footer>
 
     <script>
