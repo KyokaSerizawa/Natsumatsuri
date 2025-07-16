@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natsumatsuri なつまつり - Summer Festival</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght=400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         /* Elegant Golden Vibe Theme */
         body {
@@ -69,20 +69,36 @@
                 <span class="font-noto font-black">なつまつり</span>
             </div>
             <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-black transition">About</a>
-                <a href="#activities" class="text-gray-600 hover:text-black transition">Activities</a>
-                <a href="#schedule" class="text-gray-600 hover:text-black transition">Schedule</a>
-                <a href="#location" class="text-gray-600 hover:text-black transition">Location</a>
+                <a href="#about" class="text-gray-600 hover:text-black transition flex items-center font-bold">
+                    <img src="icons/firework.png" alt="About Icon" class="page-icon w-5 h-5 mr-1"> About
+                </a>
+                <a href="#activities" class="text-gray-600 hover:text-black transition flex items-center font-bold">
+                    <img src="icons/firework.png" alt="Activities Icon" class="page-icon w-5 h-5 mr-1"> Activities
+                </a>
+                <a href="#schedule" class="text-gray-600 hover:text-black transition flex items-center font-bold">
+                    <img src="icons/firework.png" alt="Schedule Icon" class="page-icon w-5 h-5 mr-1"> Schedule
+                </a>
+                <a href="#location" class="text-gray-600 hover:text-black transition flex items-center font-bold">
+                    <img src="icons/firework.png" alt="Location Icon" class="page-icon w-5 h-5 mr-1"> Location
+                </a>
             </div>
             <button id="mobile-menu-button" class="md:hidden flex items-center">
                 <img src="icons/icons8-menu-100.png" alt="Menu Icon" class="page-icon w-6 h-6">
             </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
-            <a href="#activities" class="block py-2 px-4 text-sm hover:bg-gray-200">Activities</a>
-            <a href="#schedule" class="block py-2 px-4 text-sm hover:bg-gray-200">Schedule</a>
-            <a href="#location" class="block py-2 px-4 text-sm hover:bg-gray-200">Location</a>
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold">
+                <img src="icons/firework.png" alt="About Icon" class="page-icon w-5 h-5 mr-1"> About
+            </a>
+            <a href="#activities" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold">
+                <img src="icons/firework.png" alt="Activities Icon" class="page-icon w-5 h-5 mr-1"> Activities
+            </a>
+            <a href="#schedule" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold">
+                <img src="icons/firework.png" alt="Schedule Icon" class="page-icon w-5 h-5 mr-1"> Schedule
+            </a>
+            <a href="#location" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold">
+                <img src="icons/firework.png" alt="Location Icon" class="page-icon w-5 h-5 mr-1"> Location
+            </a>
         </div>
     </header>
 
@@ -418,7 +434,8 @@
 
         <section id="location" class="my-20 scroll-mt-20">
             <h2 class="text-4xl font-bold mb-12 text-center section-title font-noto">Find Us</h2>
-            <div class="card overflow-hidden p-8 mb-8"> <h3 class="text-2xl font-bold mb-4">Event Venues</h3>
+            <div class="card overflow-hidden p-8 mb-8">
+                <h3 class="text-2xl font-bold mb-4">Event Venues</h3>
                 <p class="text-lg mb-2 font-bold">Parliament & Cafeteria</p>
                 <p class="text-gray-500 mb-4">Temple University, Japan Campus<br>1-14-29 Taishido, Setagaya-ku, Tokyo, 154-0004</p>
                 <a href="https://www.tuj.ac.jp/maps/tokyo" target="_blank" rel="noopener noreferrer" class="inline-block theme-accent-bg font-bold py-2 px-4 rounded-full transition duration-300">
