@@ -406,7 +406,7 @@
                                     <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                         <div>
                                             <p class="text-sm text-gray-500">7:45 PM</p>
-                                            <p class="font-medium">destinyhopetiara (Parliament)</p>
+                                            <p class="font-medium">Destinyhopetiara (Parliament)</p>
                                         </div>
                                     </div>
                                 </div>
