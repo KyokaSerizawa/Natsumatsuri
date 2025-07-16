@@ -429,20 +429,20 @@
                         </a>
                     </div>
                      <div class="h-64 md:h-full">
-    <a href="https://www.tuj.ac.jp/maps/tokyo" target="_blank" rel="noopener noreferrer">
-        <img src="icons/Map.png" alt="Map showing Campus location" class="w-full h-full object-contain">
-    </a>
-</div>
+                         <a href="https://www.tuj.ac.jp/maps/tokyo" target="_blank" rel="noopener noreferrer">
+                            <img src="icons/Map.png" alt="Map showing Campus location" class="w-full h-full object-contain">
+                         </a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="disclaimer" class="my-16 scroll-mt-20">
-            <div class="h-64 md:h-full">
-    <a href="https://www.tuj.ac.jp/maps/tokyo" target="_blank" rel="noopener noreferrer">
-        <img src="icons/Map.png" alt="Map showing Campus location" class="w-full h-full object-contain">
-    </a>
-</div>
+            <div class="max-w-3xl mx-auto text-sm text-gray-500 leading-relaxed">
+                 <p>
+                    Disclaimer: the Natsu Matsuri is organized and run by students of the Japanese Culture Club (JCC) at Temple University, Japan Campus ("TUJ"), and is editorially independent of TUJ and Temple University ("Temple"). Any opinions expressed by the organizers or others on this website are those of the respective writers or speakers, not of TUJ or Temple.
+                </p>
+            </div>
         </section>
 
     </main>
