@@ -121,7 +121,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-2">Food Yatai</h3>
                     <p class="text-gray-500 font-semibold">Location: Cafeteria</p>
-                    <span class="mt-2 inline-block text-blue-500 text-sm font-semibold">Click for details!</span>
+                    <span class="mt-2 inline-block text-red-500 text-sm font-semibold">Click for details!</span>
                 </a>
                 <a href="#crafting-space-details" class="card block p-6 text-center">
                     <div class="mb-4 theme-accent-text">
@@ -129,7 +129,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-2">Crafting Space</h3>
                     <p class="text-gray-500 font-semibold">Location: Cafeteria</p>
-                    <span class="mt-2 inline-block text-blue-500 text-sm font-semibold">Click for details!</span>
+                    <span class="mt-2 inline-block text-red-500 text-sm font-semibold">Click for details!</span>
                 </a>
                 <a href="#crafting-market-details" class="card block p-6 text-center">
                     <div class="mb-4 theme-accent-text">
@@ -137,7 +137,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-2">Crafting Market</h3>
                     <p class="text-gray-500 font-semibold">Location: Parliament</p>
-                    <span class="mt-2 inline-block text-blue-500 text-sm font-semibold">Click for details!</span>
+                    <span class="mt-2 inline-block text-red-500 text-sm font-semibold">Click for details!</span>
                 </a>
                 <a href="#performance-details" class="card block p-6 text-center">
                     <div class="mb-4 theme-accent-text">
@@ -145,7 +145,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-2">Performance</h3>
                     <p class="text-gray-500 font-semibold">Location: Parliament</p>
-                    <span class="mt-2 inline-block text-blue-500 text-sm font-semibold">Click for details!</span>
+                    <span class="mt-2 inline-block text-red-500 text-sm font-semibold">Click for details!</span>
                 </a>
             </div>
         </section>
