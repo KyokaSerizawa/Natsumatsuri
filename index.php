@@ -198,7 +198,7 @@
             <h2 class="text-4xl font-bold mb-12 text-center section-title font-noto">Crafting Space</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="card p-6 text-center">
-                    <div class="mb-4 theme-accent-text"><img src="icons/firework.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
+                    <div class="mb-4 theme-accent-text"><img src="icons/icons8-circle-100.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Rubber Band Gun Crafting</h3>
                 </div>
                 <div class="card p-6 text-center">
