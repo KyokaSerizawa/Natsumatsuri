@@ -65,6 +65,7 @@
 <body>
 
     <div id="fireworks-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
+
     <header class="shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="text-2xl font-bold section-title" style="border-bottom: none; padding-bottom: 0;">
@@ -107,9 +108,10 @@
     <section>
         <img src="banner.gif" alt="Natsumatsuri Festival Banner" class="w-full object-cover">
     </section>
-    
+
     <main class="container mx-auto px-6 py-12" style="position: relative; z-index: 1;">
-    <section id="about" class="my-16 scroll-mt-20">
+
+        <section id="about" class="my-16 scroll-mt-20">
             <h2 class="text-4xl font-bold mb-6 section-title font-noto">Welcome to the Festival!</h2>
             <div class="max-w-3xl mx-auto text-lg leading-relaxed">
                 <p class="mb-4">
@@ -456,19 +458,19 @@
     </main>
 
     <footer style="position: relative; z-index: 1;">
-    <div class="container mx-auto px-6 py-8 text-center text-white">
+        <div class="container mx-auto px-6 py-8 text-center text-white">
             <p class="font-bold text-lg mb-2 font-noto">Natsumatsuri なつまつり 2025</p>
             <p>Japanese Culture Club & Student Government</p>
             <div class="flex justify-center space-x-4 mt-4">
-    <a href="https://www.instagram.com/jcc_tuj/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center">
-        <img src="icons/icons8-instagram-100.png" alt="Instagram of TUJ JCC" class="page-icon w-6 h-6">
-        <span class="text-xs mt-1">JCC</span>
-    </a>
-    <a href="https://www.instagram.com/templeunivjapan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center">
-        <img src="icons/icons8-instagram-100.png" alt="Instagram of TUJ SAO" class="page-icon w-6 h-6">
-        <span class="text-xs mt-1">TUJ</span>
-    </a>
-</div>
+                <a href="https://www.instagram.com/jcc_tuj/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center">
+                    <img src="icons/icons8-instagram-100.png" alt="Instagram of TUJ JCC" class="page-icon w-6 h-6">
+                    <span class="text-xs mt-1">JCC</span>
+                </a>
+                <a href="https://www.instagram.com/templeunivjapan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center">
+                    <img src="icons/icons8-instagram-100.png" alt="Instagram of TUJ SAO" class="page-icon w-6 h-6">
+                    <span class="text-xs mt-1">TUJ</span>
+                </a>
+            </div>
 
             <div class="mt-8 border-t border-gray-600 pt-6">
                 <p class="text-sm text-gray-300">
@@ -478,7 +480,7 @@
                     </span>
                 </p>
             </div>
-            </div>
+        </div>
     </footer>
 
     <script>
@@ -508,11 +510,11 @@
             });
         });
     </script>
-<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.7/dist/fireworks.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.7/dist/fireworks.min.js"></script>
+    
     <script>
         const container = document.getElementById('fireworks-container');
-        
-        // This is the corrected line
         const fireworks = new Fireworks.default(container, {
             autoresize: true,
             opacity: 0.5,
@@ -563,6 +565,6 @@
         });
         fireworks.start();
     </script>
-    ```
-    </body>
+
+</body>
 </html>
