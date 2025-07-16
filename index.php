@@ -464,10 +464,16 @@
             <p class="font-bold text-lg mb-2 font-noto">Natsumatsuri なつまつり 2025</p>
             <p>Japanese Culture Club & Student Government</p>
             <div class="flex justify-center space-x-4 mt-4">
-                <a href="#" class="text-gray-400 hover:text-white"><img src="icons/firework.png" alt="Facebook Icon" class="page-icon w-6 h-6"></a>
-                <a href="#" class="text-gray-400 hover:text-white"><img src="icons/firework.png" alt="Twitter Icon" class="page-icon w-6 h-6"></a>
-                <a href="#" class="text-gray-400 hover:text-white"><img src="icons/firework.png" alt="Instagram Icon" class="page-icon w-6 h-6"></a>
-            </div>
+    <a href="https://www.instagram.com/account1_placeholder" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
+        <img src="icons/icons8-instagram-100.png" alt="Instagram Account 1" class="page-icon w-6 h-6">
+    </a>
+    <a href="https://www.instagram.com/account2_placeholder" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
+        <img src="icons/icons8-instagram-100.png" alt="Instagram Account 2" class="page-icon w-6 h-6">
+    </a>
+    <a href="https://www.instagram.com/account3_placeholder" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
+        <img src="icons/icons8-instagram-100.png" alt="Instagram Account 3" class="page-icon w-6 h-6">
+    </a>
+</div>
 
             <div class="mt-8 border-t border-gray-600 pt-6">
                 <p class="text-sm text-gray-300">
