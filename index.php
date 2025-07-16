@@ -253,27 +253,27 @@
                  <div class="card p-6 text-center">
                     <div class="mb-4 theme-accent-text"><img src="icons/firework.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Music Club</h3><p class="text-gray-500 font-semibold">Live Band</p>
-                    <p><i>"This is a test"</i></p>
+                    // <p><i>"This is a test"</i></p>
                  </div>
                  <div class="card p-6 text-center">
                     <div class="mb-4 theme-accent-text"><img src="icons/firework.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Kimiko Wakayagi</h3><p class="text-gray-500 font-semibold">Traditional Dance</p>
-                    <p><i>"This is a test"</i></p>
+                    // <p><i>"This is a test"</i></p>
                  </div>
                  <div class="card p-6 text-center">
                     <div class="mb-4 theme-accent-text"><img src="icons/firework.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">kendama performer</h3><p class="text-gray-500 font-semibold">Kendama</p>
-                    <p><i>"This is a test"</i></p>
+                    // <p><i>"This is a test"</i></p>
                  </div>
                  <div class="card p-6 text-center">
                     <div class="mb-4 theme-accent-text"><img src="icons/firework.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Renji</h3><p class="text-gray-500 font-semibold">Singer</p>
-                    <p><i>"This is a test"</i></p>
+                    // <p><i>"This is a test"</i></p>
                  </div>
                  <div class="card p-6 text-center">
                     <div class="mb-4 theme-accent-text"><img src="icons/firework.png" alt="Icon" class="page-icon w-16 h-16 mx-auto"></div>
                     <h3 class="text-xl font-bold">Yume</h3><p class="text-gray-500 font-semibold">Singer & Guitarist</p>
-                    <p><i>"This is a test"</i></p>
+                    // <p><i>"This is a test"</i></p>
                  </div>
             </div>
         </section>
