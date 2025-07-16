@@ -67,7 +67,7 @@
     <header class="shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="text-2xl font-bold section-title" style="border-bottom: none; padding-bottom: 0;">
-                <span class="font-noto font-black">なつまつり</span>
+                <span class="font-noto font-black font-bold">なつまつり</span>
             </div>
             <div class="hidden md:flex space-x-8">
                 <a href="#about" class="text-gray-600 hover:text-black transition flex items-center font-bold">
