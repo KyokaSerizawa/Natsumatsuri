@@ -464,17 +464,13 @@
             <p class="font-bold text-lg mb-2 font-noto">Natsumatsuri なつまつり 2025</p>
             <p>Japanese Culture Club & Student Government</p>
             <div class="flex justify-center space-x-4 mt-4">
-    <a href="https://www.instagram.com/tuj_jcc" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center">
+    <a href="https://www.instagram.com/jcc_tuj/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center">
         <img src="icons/icons8-instagram-100.png" alt="Instagram of TUJ JCC" class="page-icon w-6 h-6">
-        <span class="text-xs mt-1">@tuj_jcc</span>
+        <span class="text-xs mt-1">JCC</span>
     </a>
-    <a href="https://www.instagram.com/tuj_sg" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center">
-        <img src="icons/icons8-instagram-100.png" alt="Instagram of TUJ Student Government" class="page-icon w-6 h-6">
-        <span class="text-xs mt-1">@tuj_sg</span>
-    </a>
-    <a href="https://www.instagram.com/tuj_sao" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center">
+    <a href="https://www.instagram.com/templeunivjapan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center">
         <img src="icons/icons8-instagram-100.png" alt="Instagram of TUJ SAO" class="page-icon w-6 h-6">
-        <span class="text-xs mt-1">@tuj_sao</span>
+        <span class="text-xs mt-1">TUJ</span>
     </a>
 </div>
 
