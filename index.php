@@ -70,16 +70,16 @@
             </div>
             <div class="hidden md:flex space-x-8">
                 <a href="#about" class="text-gray-600 hover:text-black transition flex items-center font-bold">
-                    <img src="icons/firework.png" alt="About Icon" class="page-icon w-5 h-5 mr-1"> About
+                    <img src="icons/icons8-about-100.png" alt="About Icon" class="page-icon w-5 h-5 mr-1"> About
                 </a>
                 <a href="#activities" class="text-gray-600 hover:text-black transition flex items-center font-bold">
-                    <img src="icons/firework.png" alt="Activities Icon" class="page-icon w-5 h-5 mr-1"> Activities
+                    <img src="icons/icons8-carnival-100.png" alt="Activities Icon" class="page-icon w-5 h-5 mr-1"> Activities
                 </a>
                 <a href="#schedule" class="text-gray-600 hover:text-black transition flex items-center font-bold">
-                    <img src="icons/firework.png" alt="Schedule Icon" class="page-icon w-5 h-5 mr-1"> Schedule
+                    <img src="icons/icons8-calendar-100.png" alt="Schedule Icon" class="page-icon w-5 h-5 mr-1"> Schedule
                 </a>
                 <a href="#location" class="text-gray-600 hover:text-black transition flex items-center font-bold">
-                    <img src="icons/firework.png" alt="Location Icon" class="page-icon w-5 h-5 mr-1"> Location
+                    <img src="icons/icons8-location-100.png" alt="Location Icon" class="page-icon w-5 h-5 mr-1"> Location
                 </a>
             </div>
             <button id="mobile-menu-button" class="md:hidden flex items-center">
@@ -88,16 +88,16 @@
         </nav>
         <div id="mobile-menu" class="hidden md:hidden">
             <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold">
-                <img src="icons/firework.png" alt="About Icon" class="page-icon w-5 h-5 mr-1"> About
+                <img src="icons/icons8-about-100.png" alt="About Icon" class="page-icon w-5 h-5 mr-1"> About
             </a>
             <a href="#activities" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold">
-                <img src="icons/firework.png" alt="Activities Icon" class="page-icon w-5 h-5 mr-1"> Activities
+                <img src="icons/icons8-carnival-100.png" alt="Activities Icon" class="page-icon w-5 h-5 mr-1"> Activities
             </a>
             <a href="#schedule" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold">
-                <img src="icons/firework.png" alt="Schedule Icon" class="page-icon w-5 h-5 mr-1"> Schedule
+                <img src="icons/icons8-calendar-100.png" alt="Schedule Icon" class="page-icon w-5 h-5 mr-1"> Schedule
             </a>
             <a href="#location" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold">
-                <img src="icons/firework.png" alt="Location Icon" class="page-icon w-5 h-5 mr-1"> Location
+                <img src="icons/icons8-location-100.png" alt="Location Icon" class="page-icon w-5 h-5 mr-1"> Location
             </a>
         </div>
     </header>
