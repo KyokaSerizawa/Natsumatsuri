@@ -1,6 +1,5 @@
 <?php
     // Include the counter logic and get the latest count.
-    // This will increment the counter on every page load.
     require_once('counter.php');
     $visitor_count = update_and_get_visitor_count();
 ?>
@@ -14,102 +13,93 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Elegant Golden Vibe Theme */
         body {
-            font-family: Inter, Helvetica, Arial, sans-serif; /* Changed body font to Inter with fallbacks */
-            background-color: #fdf6e3; /* Soft, warm beige background */
-            color: #586e75; /* Muted, readable text color */
+            font-family: Inter, Helvetica, Arial, sans-serif;
+            background-color: #fdf6e3;
+            color: #586e75;
+        }
+        #tsparticles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
         }
         .font-noto {
-            font-family: 'Noto Sans JP', sans-serif; /* Apply Noto Sans JP specifically here */
+            font-family: 'Noto Sans JP', sans-serif;
         }
         .section-title {
-            font-family: 'Noto Sans JP', sans-serif; /* Ensure section titles also use Noto Sans JP if desired */
-            border-bottom: 3px solid #d32623; /* Classic gold accent */
+            font-family: 'Noto Sans JP', sans-serif;
+            border-bottom: 3px solid #d32623;
             padding-bottom: 0.5rem;
             display: inline-block;
-            color: #d32623; /* Matching gold text */
+            color: #d32623;
         }
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #eee8d5; /* Subtle light border */
-            background-color: #fffcf7; /* Creamy white card background */
-            border-radius: 0.75rem; /* Slightly more rounded cards */
+            border: 1px solid #eee8d5;
+            background-color: #fffcf7;
+            border-radius: 0.75rem;
         }
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.07), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
         }
-        .theme-accent-text {
-            color: #d32623; /* A contrasting warm orange for accents */
-        }
+        .theme-accent-text { color: #d32623; }
         .theme-accent-bg {
-            background-color: #b58900; /* Button background */
+            background-color: #b58900;
             color: #ffffff;
         }
-        .theme-accent-bg:hover {
-            background-color: #936c00; /* Darker gold for hover */
-        }
+        .theme-accent-bg:hover { background-color: #936c00; }
         header {
-            background-color: rgba(253, 246, 227, 0.85) !important; /* Semi-transparent version of the body color */
+            background-color: rgba(253, 246, 227, 0.85) !important;
             backdrop-filter: blur(8px);
+            position: relative;
+            z-index: 2;
         }
-        footer {
-            background-color: #586e75; /* Muted, dark color for footer */
+        main, footer {
+            position: relative;
+            z-index: 1;
         }
-        html {
-            scroll-behavior: smooth;
-        }
+        footer { background-color: #586e75; }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body>
 
-    <div id="fireworks-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
-    <header class="shadow-md sticky top-0 z-50">
+    <div id="tsparticles"></div>
+
+    <header class="shadow-md sticky top-0">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="text-2xl font-bold section-title" style="border-bottom: none; padding-bottom: 0;">
                 <span class="font-noto font-black">なつまつり</span>
             </div>
             <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-black transition flex items-center font-bold">
-                    <img src="icons/icons8-about-100.png" alt="About Icon" class="page-icon w-5 h-5 mr-1"> About
-                </a>
-                <a href="#activities" class="text-gray-600 hover:text-black transition flex items-center font-bold">
-                    <img src="icons/icons8-carnival-100.png" alt="Activities Icon" class="page-icon w-5 h-5 mr-1"> Activities
-                </a>
-                <a href="#schedule" class="text-gray-600 hover:text-black transition flex items-center font-bold">
-                    <img src="icons/icons8-calendar-100.png" alt="Schedule Icon" class="page-icon w-5 h-5 mr-1"> Schedule
-                </a>
-                <a href="#location" class="text-gray-600 hover:text-black transition flex items-center font-bold">
-                    <img src="icons/icons8-location-100.png" alt="Location Icon" class="page-icon w-5 h-5 mr-1"> Location
-                </a>
+                <a href="#about" class="text-gray-600 hover:text-black transition flex items-center font-bold"><img src="icons/icons8-about-100.png" alt="About Icon" class="page-icon w-5 h-5 mr-1"> About</a>
+                <a href="#activities" class="text-gray-600 hover:text-black transition flex items-center font-bold"><img src="icons/icons8-carnival-100.png" alt="Activities Icon" class="page-icon w-5 h-5 mr-1"> Activities</a>
+                <a href="#schedule" class="text-gray-600 hover:text-black transition flex items-center font-bold"><img src="icons/icons8-calendar-100.png" alt="Schedule Icon" class="page-icon w-5 h-5 mr-1"> Schedule</a>
+                <a href="#location" class="text-gray-600 hover:text-black transition flex items-center font-bold"><img src="icons/icons8-location-100.png" alt="Location Icon" class="page-icon w-5 h-5 mr-1"> Location</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden flex items-center">
                 <img src="icons/icons8-menu-100.png" alt="Menu Icon" class="page-icon w-6 h-6">
             </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold">
-                <img src="icons/icons8-about-100.png" alt="About Icon" class="page-icon w-5 h-5 mr-1"> About
-            </a>
-            <a href="#activities" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold">
-                <img src="icons/icons8-carnival-100.png" alt="Activities Icon" class="page-icon w-5 h-5 mr-1"> Activities
-            </a>
-            <a href="#schedule" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold">
-                <img src="icons/icons8-calendar-100.png" alt="Schedule Icon" class="page-icon w-5 h-5 mr-1"> Schedule
-            </a>
-            <a href="#location" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold">
-                <img src="icons/icons8-location-100.png" alt="Location Icon" class="page-icon w-5 h-5 mr-1"> Location
-            </a>
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold"><img src="icons/icons8-about-100.png" alt="About Icon" class="page-icon w-5 h-5 mr-1"> About</a>
+            <a href="#activities" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold"><img src="icons/icons8-carnival-100.png" alt="Activities Icon" class="page-icon w-5 h-5 mr-1"> Activities</a>
+            <a href="#schedule" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold"><img src="icons/icons8-calendar-100.png" alt="Schedule Icon" class="page-icon w-5 h-5 mr-1"> Schedule</a>
+            <a href="#location" class="block py-2 px-4 text-sm hover:bg-gray-200 flex items-center font-bold"><img src="icons/icons8-location-100.png" alt="Location Icon" class="page-icon w-5 h-5 mr-1"> Location</a>
         </div>
     </header>
 
     <section>
         <img src="banner.gif" alt="Natsumatsuri Festival Banner" class="w-full object-cover">
     </section>
-    
-    <main class="container mx-auto px-6 py-12" style="position: relative; z-index: 1;">
-    <section id="about" class="my-16 scroll-mt-20">
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="about" class="my-16 scroll-mt-20">
             <h2 class="text-4xl font-bold mb-6 section-title font-noto">Welcome to the Festival!</h2>
             <div class="max-w-3xl mx-auto text-lg leading-relaxed">
                 <p class="mb-4">
@@ -275,7 +265,8 @@
 
 
         <section id="schedule" class="my-20 scroll-mt-20">
-            <h2 class="text-4xl font-bold mb-12 text-center section-title font-noto">Event Schedule</h2>
+            <h2 class="text-4xl font-bold mb-4 text-center section-title font-noto">Event Schedule</h2>
+            <p class="text-center text-xl font-semibold text-gray-600 mb-12">Friday, July 25, 2025</p>
             <div class="max-w-2xl mx-auto card p-8">
                 <div class="flow-root">
                     <ul class="-mb-8">
@@ -293,13 +284,12 @@
                                             <p class="text-sm text-gray-500">5:00 PM</p>
                                             <p class="font-medium">Doors Open (General)</p>
                                             <p class="font-medium mt-1">Yume (Parliament)</p>
-                                            <p class="font-medium mt-1"></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li>
+                         <li>
                             <div class="relative pb-8">
                                 <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
                                 <div class="relative flex space-x-3">
@@ -417,7 +407,6 @@
                                     </div>
                                     <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                         <div><p class="text-sm text-gray-500">8:00 PM</p><p class="font-medium">Event Finish</p><br></div>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -455,114 +444,46 @@
 
     </main>
 
-    <footer style="position: relative; z-index: 1;">
-    <div class="container mx-auto px-6 py-8 text-center text-white">
+    <footer>
+        <div class="container mx-auto px-6 py-8 text-center text-white">
             <p class="font-bold text-lg mb-2 font-noto">Natsumatsuri なつまつり 2025</p>
             <p>Japanese Culture Club & Student Government</p>
             <div class="flex justify-center space-x-4 mt-4">
-    <a href="https://www.instagram.com/jcc_tuj/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center">
-        <img src="icons/icons8-instagram-100.png" alt="Instagram of TUJ JCC" class="page-icon w-6 h-6">
-        <span class="text-xs mt-1">JCC</span>
-    </a>
-    <a href="https://www.instagram.com/templeunivjapan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center">
-        <img src="icons/icons8-instagram-100.png" alt="Instagram of TUJ SAO" class="page-icon w-6 h-6">
-        <span class="text-xs mt-1">TUJ</span>
-    </a>
-</div>
-
+                <a href="https://www.instagram.com/jcc_tuj/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center"><img src="icons/icons8-instagram-100.png" alt="Instagram of TUJ JCC" class="page-icon w-6 h-6"><span class="text-xs mt-1">JCC</span></a>
+                <a href="https://www.instagram.com/templeunivjapan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white flex flex-col items-center"><img src="icons/icons8-instagram-100.png" alt="Instagram of TUJ SAO" class="page-icon w-6 h-6"><span class="text-xs mt-1">TUJ</span></a>
+            </div>
             <div class="mt-8 border-t border-gray-600 pt-6">
-                <p class="text-sm text-gray-300">
-                    Total Site Visits: 
-                    <span class="font-bold text-lg text-white">
-                        <?php echo number_format($visitor_count); ?>
-                    </span>
-                </p>
+                <p class="text-sm text-gray-300">Total Site Visits: <span class="font-bold text-lg text-white"><?php echo number_format($visitor_count); ?></span></p>
             </div>
-            </div>
+        </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
         });
-
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
-                    // Close mobile menu on click
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
+                    if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+                        document.getElementById('mobile-menu').classList.add('hidden');
                     }
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
     </script>
-    
-  <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.7/dist/fireworks.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-fireworks@2.12.0/tsparticles.fireworks.bundle.min.js"></script>
+
     <script>
-        const container = document.getElementById('fireworks-container');
-        
-        // This is the corrected line:
-        const fireworks = new Fireworks.default(container, {
-            autoresize: true,
-            opacity: 0.5,
-            acceleration: 1.02,
-            friction: 0.97,
-            gravity: 1.5,
-            particles: 60,
-            traceSpeed: 3,
-            explosion: 6,
-            intensity: 8,
-            flickering: 50,
-            lineStyle: 'round',
-            hue: {
-                min: 0,
-                max: 360
-            },
-            delay: {
-                min: 30,
-                max: 60
-            },
-            rocketsPoint: {
-                min: 50,
-                max: 50
-            },
-            lineWidth: {
-                explosion: {
-                    min: 1,
-                    max: 3
-                },
-                trace: {
-                    min: 1,
-                    max: 2
-                }
-            },
-            brightness: {
-                min: 50,
-                max: 80
-            },
-            decay: {
-                min: 0.015,
-                max: 0.03
-            },
-            mouse: {
-                click: false,
-                move: false,
-                max: 1
-            }
+        tsParticles.load("tsparticles", {
+            preset: "fireworks",
         });
-        fireworks.start();
     </script>
-    </body>
+
+</body>
 </html>
