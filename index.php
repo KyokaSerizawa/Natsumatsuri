@@ -429,10 +429,10 @@
                         </a>
                     </div>
                      <div class="h-64 md:h-full">
-                         <a href="https://www.tuj.ac.jp/maps/tokyo" target="_blank" rel="noopener noreferrer">
-                            <img src="icons/Map.png" alt="Map showing Campus location" class="w-full h-full object-cover">
-                         </a>
-                    </div>
+    <a href="https://www.tuj.ac.jp/maps/tokyo" target="_blank" rel="noopener noreferrer">
+        <img src="icons/Map.png" alt="Map showing Campus location" class="w-full h-full object-contain">
+    </a>
+</div>
                 </div>
             </div>
         </section>
