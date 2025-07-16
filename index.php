@@ -16,15 +16,15 @@
     <style>
         /* Elegant Golden Vibe Theme */
         body {
-            font-family: Helvetica, Arial, sans-serif;
+            font-family: Inter, Helvetica, Arial, sans-serif; /* Changed body font to Inter with fallbacks */
             background-color: #fdf6e3; /* Soft, warm beige background */
             color: #586e75; /* Muted, readable text color */
         }
         .font-noto {
-            font-family: Helvetica, Arial, sans-serif;
+            font-family: 'Noto Sans JP', sans-serif; /* Apply Noto Sans JP specifically here */
         }
         .section-title {
-            font-family: Helvetica, Arial, sans-serif;
+            font-family: 'Noto Sans JP', sans-serif; /* Ensure section titles also use Noto Sans JP if desired */
             border-bottom: 3px solid #d32623; /* Classic gold accent */
             padding-bottom: 0.5rem;
             display: inline-block;
@@ -67,7 +67,7 @@
     <header class="shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="text-2xl font-bold section-title" style="border-bottom: none; padding-bottom: 0;">
-                <span class="font-noto font-black font-bold">なつまつり</span>
+                <span class="font-noto font-black">なつまつり</span>
             </div>
             <div class="hidden md:flex space-x-8">
                 <a href="#about" class="text-gray-600 hover:text-black transition flex items-center font-bold">
