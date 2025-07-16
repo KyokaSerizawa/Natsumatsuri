@@ -75,7 +75,7 @@
                 <a href="#location" class="text-gray-600 hover:text-black transition">Location</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden flex items-center">
-                <img src="icons/firework.png" alt="Menu Icon" class="page-icon w-6 h-6">
+                <img src="icons/icons8-menu-100.png" alt="Menu Icon" class="page-icon w-6 h-6">
             </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden">
