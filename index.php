@@ -508,12 +508,11 @@
             });
         });
     </script>
-    
-  <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.7/dist/fireworks.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.7/dist/fireworks.min.js"></script>
     <script>
         const container = document.getElementById('fireworks-container');
         
-        // This is the corrected line:
+        // This is the corrected line
         const fireworks = new Fireworks.default(container, {
             autoresize: true,
             opacity: 0.5,
@@ -564,5 +563,6 @@
         });
         fireworks.start();
     </script>
+    ```
     </body>
 </html>
