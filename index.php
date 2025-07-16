@@ -40,7 +40,7 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.07), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
         }
         .theme-accent-text {
-            color: #cb4b16; /* A contrasting warm orange for accents */
+            color: #d32623; /* A contrasting warm orange for accents */
         }
         .theme-accent-bg {
             background-color: #b58900; /* Button background */
