@@ -64,6 +64,7 @@
 </head>
 <body>
 
+    <div id="fireworks-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
     <header class="shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="text-2xl font-bold section-title" style="border-bottom: none; padding-bottom: 0;">
@@ -106,10 +107,9 @@
     <section>
         <img src="banner.gif" alt="Natsumatsuri Festival Banner" class="w-full object-cover">
     </section>
-
-    <main class="container mx-auto px-6 py-12">
-
-        <section id="about" class="my-16 scroll-mt-20">
+    
+    <main class="container mx-auto px-6 py-12" style="position: relative; z-index: 1;">
+    <section id="about" class="my-16 scroll-mt-20">
             <h2 class="text-4xl font-bold mb-6 section-title font-noto">Welcome to the Festival!</h2>
             <div class="max-w-3xl mx-auto text-lg leading-relaxed">
                 <p class="mb-4">
@@ -455,8 +455,8 @@
 
     </main>
 
-    <footer>
-        <div class="container mx-auto px-6 py-8 text-center text-white">
+    <footer style="position: relative; z-index: 1;">
+    <div class="container mx-auto px-6 py-8 text-center text-white">
             <p class="font-bold text-lg mb-2 font-noto">Natsumatsuri なつまつり 2025</p>
             <p>Japanese Culture Club & Student Government</p>
             <div class="flex justify-center space-x-4 mt-4">
@@ -508,5 +508,59 @@
             });
         });
     </script>
-</body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.7/dist/fireworks.min.js"></script>
+    <script>
+        const container = document.getElementById('fireworks-container');
+        const fireworks = new Fireworks(container, {
+            autoresize: true,
+            opacity: 0.5,
+            acceleration: 1.02,
+            friction: 0.97,
+            gravity: 1.5,
+            particles: 60,
+            traceSpeed: 3,
+            explosion: 6,
+            intensity: 8,
+            flickering: 50,
+            lineStyle: 'round',
+            hue: {
+                min: 0,
+                max: 360
+            },
+            delay: {
+                min: 30,
+                max: 60
+            },
+            rocketsPoint: {
+                min: 50,
+                max: 50
+            },
+            lineWidth: {
+                explosion: {
+                    min: 1,
+                    max: 3
+                },
+                trace: {
+                    min: 1,
+                    max: 2
+                }
+            },
+            brightness: {
+                min: 50,
+                max: 80
+            },
+            decay: {
+                min: 0.015,
+                max: 0.03
+            },
+            mouse: {
+                click: false,
+                move: false,
+                max: 1
+            }
+        });
+        fireworks.start();
+    </script>
+    </body>
 </html>
