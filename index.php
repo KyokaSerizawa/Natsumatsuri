@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natsumatsuri なつまつり - Summer Festival</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght=400;700;900&display=swap" rel="stylesheet">
     <style>
         /* Elegant Golden Vibe Theme */
         body {
@@ -418,22 +418,17 @@
 
         <section id="location" class="my-20 scroll-mt-20">
             <h2 class="text-4xl font-bold mb-12 text-center section-title font-noto">Find Us</h2>
+            <div class="card overflow-hidden p-8 mb-8"> <h3 class="text-2xl font-bold mb-4">Event Venues</h3>
+                <p class="text-lg mb-2 font-bold">Parliament & Cafeteria</p>
+                <p class="text-gray-500 mb-4">Temple University, Japan Campus<br>1-14-29 Taishido, Setagaya-ku, Tokyo, 154-0004</p>
+                <a href="https://www.tuj.ac.jp/maps/tokyo" target="_blank" rel="noopener noreferrer" class="inline-block theme-accent-bg font-bold py-2 px-4 rounded-full transition duration-300">
+                    Get Directions
+                </a>
+            </div>
             <div class="card overflow-hidden">
-                <div class="grid md:grid-cols-2">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-4">Event Venues</h3>
-                        <p class="text-lg mb-2 font-bold">Parliament & Cafeteria</p>
-                        <p class="text-gray-500 mb-4">Temple University, Japan Campus<br>1-14-29 Taishido, Setagaya-ku, Tokyo, 154-0004</p>
-                        <a href="https://www.tuj.ac.jp/maps/tokyo" target="_blank" rel="noopener noreferrer" class="inline-block theme-accent-bg font-bold py-2 px-4 rounded-full transition duration-300">
-                            Get Directions
-                        </a>
-                    </div>
-                     <div class="h-64 md:h-full">
-                         <a href="https://www.tuj.ac.jp/maps/tokyo" target="_blank" rel="noopener noreferrer">
-                            <img src="icons/Map.png" alt="Map showing Campus location" class="w-full h-full object-contain">
-                         </a>
-                    </div>
-                </div>
+                <a href="https://www.tuj.ac.jp/maps/tokyo" target="_blank" rel="noopener noreferrer">
+                    <img src="icons/Map.png" alt="Map showing Campus location" class="w-full object-contain">
+                </a>
             </div>
         </section>
 
