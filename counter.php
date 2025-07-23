@@ -1,4 +1,4 @@
-<?php
+<?php /*
 
 function update_and_get_visitor_count() {
     $counter_file = 'counter.txt';
@@ -22,5 +22,5 @@ function update_and_get_visitor_count() {
 
     return $count;
 }
-
+*/
 ?>
